@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*----- Variaveis Root --------*/ 
+:root {
+    --color-primary:#F8C300; 
+    --color-danger:#ff7782;
+    --color-success:#41f1b6;
+    --color-warning:#ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-light: rgba(0, 0, 0, 0.336)
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: linear-gradient(#F8C300, #C39D0D);
+    --color-background-dark: #1F1A17;
+    --color-background-ligth: #f1f1f1;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+/*----- dark theme variaveis --------*/ 
+.dark-theme-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0,0,,0 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+
+/*----- definições gerais --------*/ 
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+
+html{
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background-color: var(--color-background);
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--color-white);
+}
+
+h2{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--color-white);
+}
+
+h3{
+    font-size: 0.87rem;
+}
+
+h4{
+    font-size: 0.8rem;
+}
+
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.9rem;
+    color: var(--color-info-dark);
+}
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+p{
+    color: var(--color-white);
+}
+
+b{
+    color: var(--color-dark)
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.danger{
+    color: var(--color-danger);
+}
+
+.success{
+    color: var(--color-success);
+}
+
+.warning{
+    color: var(--color-warning);
+}
+.btn-dark{
+    color: var(--color-primary);
+    background: var(--color-background-dark);
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.336);
+    padding: 1rem 5rem ;
+    border-radius: 44px;
+    transition: all 400ms;
+    cursor: pointer;
+}
+.btn-dark:hover{
+    box-shadow: none;
+}
+
+.btn-primary{
+    color: var(--color-background-dark);
+    background: var(--color-primary);
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.336);
+    padding: 1rem 5rem ;
+    border-radius: 44px;
+    transition: all 400ms;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    box-shadow: none;
+}
+input{
+   background: var(--color-white); 
+   padding: 1rem;
+   border-radius: 8px;
+   margin-bottom: 1rem;
+   width: 100%;
+}
+label{
+    font-size: 16px;
+    color: var(--color-white);
+    font-weight: 500;
+}
+/*----- Inicio Menu topo --------*/ 
+header{
+    background: var(--color-background-dark);
+}
+
+nav{
+    background: var(--color-background-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: var(--color-white);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.336);
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+nav .logo{
+    display: flex; 
+    align-items: center;
+}
+
+
+nav .logo img{
+    width: 2rem;
+    margin-right: 6px;
+}
+nav .logo a{
+    font-size: 20px;
+}
+
+nav .logo a span{
+    color: var(--color-primary);
+}
+
+nav .ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .ul li{
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+nav .ul li:hover{
+    color: var(--color-primary);
+    transition: all 400ms;
+}
+
+nav .telefone-topo{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav .telefone-topo span{
+    color: var(--color-primary);
+    margin-right: 8px;
+}
+nav .telefone-topo p{
+    color: white;
+}
+
+/*----- Inicio hero --------*/ 
+.hero-principal{
+    background: var(--color-background);
+    padding: 14rem 1rem 8rem 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.hero-principal h1{
+    margin-bottom: 0.7rem;
+}
+.hero-principal h2{
+    margin-bottom: 4rem;
+}
+
+/*----- Nossos serviços --------*/ 
+
+.nossos-servicos{
+    background: var(--color-background-dark);
+    padding: 3rem;
+    
+}
+.titulo-servicos{
+    text-align: center;
+    margin: 2rem;
+}
+.titulo-servicos h3{
+    color: var(--color-white);
+    font-size: 36px;
+    text-align: center;
+}
+
+.titulo-servicos h3 span{
+    color: var(--color-primary);
+}
+.nossos-servicos .container{
+    display: inline-block;
+    text-align: center;
+}
+.cards-servicos{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    
+    grid-template-columns: 33% 33% 33%;
+}
+
+.cards-servicos .card{
+    background: rgb(0,0,0,0.3);
+    padding: 2rem 2rem;
+    border-radius: 8px;
+    margin: 1rem 2rem;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.336); 
+    
+}
+
+.cards-servicos .card:hover{
+    box-shadow: none;
+}
+
+.cards-servicos .card .titulo-card{
+    display: flex;
+    margin: 1rem 0;
+    align-items: center;
+}
+.cards-servicos .card .titulo-card span{
+    color: var(--color-primary);
+    margin-right: 1rem;
+}
+.cards-servicos .card .titulo-card h2{
+    font-size: 16px;
+}
+.txt-card p{
+    text-align: left;
+    font-weight: 300;
+}
+
+.nossos-servicos .btn-primary{
+    margin: 2rem;
+}
+
+/*----- Porque a potatohead --------*/ 
+
+.pq-potatohead .container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.pq-potatohead .container img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.pq-potatohead .conteudo-do-pq{
+    padding: 4rem 8rem 0 4rem;
+    margin-bottom: 4rem;
+    display: block;
+}
+
+.pq-potatohead .conteudo-do-pq h3{
+    font-size: 36px; 
+    margin-bottom: 1rem;
+}
+
+.pq-potatohead .conteudo-do-pq p{
+    color: var(--color-background-dark);
+    margin-bottom: 16rem;
+
+}
+
+.pq-potatohead .conteudo-do-pq h4{
+    color: var(--color-background-dark);
+    font-size: 18px;
+    margin-right: 8rem;
+    margin-bottom: 2rem;
+}
+
+/*----- Metodologia --------*/ 
+
+.metodologia .container{
+    padding: 4rem 8rem;
+    background: var(--color-background-ligth);
+}
+
+.metodologia .conteudo-metodologia h3{
+    font-size: 36px;
+    margin-bottom: 1rem;
+}
+.metodologia .conteudo-metodologia h3 span{
+    color: var(--color-primary);
+}
+
+.metodologia .conteudo-metodologia p{
+    color: var(--color-background-dark);
+    max-width: 45%;
+    margin-bottom: 3rem;
+}
+
+.metodologia .cards-metodologia{  
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.metodologia .cards-metodologia .card{
+    background: var(--color-white);
+    padding: 2rem 2rem;
+    border-radius: 8px;
+    margin: 1rem 1rem;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.336); 
+    transition: all 400ms;
+}
+.metodologia .cards-metodologia .card:hover{
+    box-shadow: none;
+}
+.metodologia .cards-metodologia .card h2{
+    color: var(--color-background-dark);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.metodologia .cards-metodologia .card p{
+    max-width: 100%;
+    color: var(--color-dark-variant);
+}
+
+/*----- Nossos contato --------*/
+.contato{
+    background: var(--color-background);
+}
+
+.contato .container{
+    padding: 8rem 8rem;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+}
+
+.contato .conteudo-contato{
+    padding-right: 6rem;
+    color: var(--color-white);
+}
+
+.contato .conteudo-contato small{
+    color: var(--color-white);
+}
+.contato .conteudo-contato h3{
+    font-size: 36px;
+    margin-bottom: 1rem;
+}
+.contato .conteudo-contato h3 span{
+    color: var(--color-background-dark);
+}
+.contato .conteudo-contato p{
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.formulario .btn-dark{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* footer */
+footer{
+    background-color: var(--color-background-dark);
+}
+footer .container{
+    display: flex;
+    color: white;
+    padding: 4rem;
+}
+footer .logo{
+    display: flex; 
+    align-items: center;
+    margin-bottom: 2rem;
+
+}
+
+footer .logo img{
+    width: 2rem;
+    margin-right: 6px;
+}
+footer .logo a{
+    font-size: 20px;
+}
+
+footer .logo a span{
+    color: var(--color-primary);
+}
+
+footer .container ul{
+    width: 25%;
+    margin: 30px 30px;
+}
+footer .container h3{
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+footer .container .redes-sociais{
+    display: flex;
+}
+
+footer .container .redes-sociais img{
+    margin-right: 10px;
+    width: 20px;
+    
+}
+footer .container ul > p {
+    margin-bottom: 40px;
+}
+footer .container li{
+    margin: 10px;
+}
+
+footer .container a{
+    color: white;
+}
+/*================= Media Queries tablets ========*/
+@media screen and (max-width: 1200px) {
+    
+    .cards-servicos{
+        
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .pq-potatohead .container{
+        display: inline;
+        
+        
+    }
+    .pq-potatohead .container img{
+        max-height: 300px;
+    }
+    .pq-potatohead .conteudo-do-pq{    
+        padding: 4rem 4rem 0 4rem;
+        margin-bottom: 4rem;  
+        text-align: center;
+    }
+
+    .pq-potatohead .conteudo-do-pq p{
+        margin-bottom: 8rem;
+    }
+    .pq-potatohead .conteudo-do-pq h4{
+        margin-right: 0;
+    
+    }
+
+    .metodologia .cards-metodologia{  
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .metodologia .conteudo-metodologia{
+        text-align: center;
+    }
+
+    .metodologia .conteudo-metodologia p{
+        max-width: 100%;
+    }
+
+    
+
+}
+
+
+/*================= Media Queries mobile ========*/
+
+@media screen and (max-width: 768px){
+    .cards-servicos{
+        display: block;
+        flex-direction: column;
+        width: 100%;  
+    }
+    .metodologia .cards-metodologia{  
+        display: block;
+        width: 100%;
+    }
+    .metodologia .container{
+        padding: 4rem ;
+        background: var(--color-background-ligth);
+    }
+    .contato .container{
+        display: block;
+        align-items: center;
+    }
+    .contato .conteudo-contato{
+        padding-right: 0;
+        margin-bottom: 3rem;
+        
+    }
+    .contato .container{
+        padding:  4rem;
+    }
+
+    footer .container{ 
+        flex-direction: column;
+    }
+    footer .container ul{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+}
+
