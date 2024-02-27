@@ -4,39 +4,21 @@
 /*----- Variaveis Root --------*/ 
 :root {
     --color-primary:#F8C300; 
-    --color-danger:#ff7782;
-    --color-success:#41f1b6;
-    --color-warning:#ffbb55;
     --color-white: #fff;
-    --color-info-dark: #7d8da1;
+    --color-info-dark: #aebdbe;
     --color-info-light: #dce1eb;
     --color-light: rgba(0, 0, 0, 0.336)
-    --color-primary-variant: #111e88;
     --color-dark-variant: #677483;
     --color-background: linear-gradient(#F8C300, #C39D0D);
     --color-background-dark: #1F1A17;
     --color-background-ligth: #f1f1f1;
 
     --card-border-radius: 2rem;
-    --border-radius-1: 0.4rem;
-    --border-radius-2: 0.8rem;
-    --border-radius-3: 1.2rem;
-
     --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
 
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 /*----- dark theme variaveis --------*/ 
-.dark-theme-variables{
-    --color-background: #181a1e;
-    --color-white: #202528;
-    --color-dark: #edeffd;
-    --color-dark-variant: #a3bdcc;
-    --color-light: rgba(0,0,,0 0.4);
-    --box-shadow: 0 2rem 3rem var(--color-light);
-}
-
 
 /*----- definições gerais --------*/ 
 *{
@@ -63,6 +45,11 @@ body{
     background-color: var(--color-background);
     overflow-x: hidden;
     color: var(--color-dark);
+    
+}
+
+.container{
+    padding: 8rem 8rem;
 }
 
 a{
@@ -76,7 +63,7 @@ img{
 
 h1{
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color: var(--color-white);
 }
 
@@ -87,7 +74,7 @@ h2{
 }
 
 h3{
-    font-size: 0.87rem;
+    font-size: 36px;
 }
 
 h4{
@@ -118,25 +105,6 @@ p{
     color: var(--color-white);
 }
 
-b{
-    color: var(--color-dark)
-}
-
-.primary{
-    color: var(--color-primary);
-}
-
-.danger{
-    color: var(--color-danger);
-}
-
-.success{
-    color: var(--color-success);
-}
-
-.warning{
-    color: var(--color-warning);
-}
 .btn-dark{
     color: var(--color-primary);
     background: var(--color-background-dark);
@@ -145,7 +113,7 @@ b{
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.336);
     padding: 1rem 5rem ;
     border-radius: 44px;
-    transition: all 400ms;
+    transition: all 400ms ease;
     cursor: pointer;
 }
 .btn-dark:hover{
@@ -160,7 +128,7 @@ b{
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.336);
     padding: 1rem 5rem ;
     border-radius: 44px;
-    transition: all 400ms;
+    transition: all 400ms ease;
     cursor: pointer;
 }
 .btn-primary:hover{
@@ -178,6 +146,40 @@ label{
     color: var(--color-white);
     font-weight: 500;
 }
+
+.card{
+    padding: 2rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.336); 
+	transition: all 400ms ease;
+    margin: 1rem 1rem;
+    /*-animation: fade-in linear;
+    animation-timeline: view(500px 100px);-*/ 
+}
+/*---Animação de fazer os itens aparecerem na tela conforme o scroll acontecer
+    @keyframes fade-in{
+    from{ scale: .8; opacity: 0;}
+    to{scale: 1; opacity: 1;}
+}-----*/
+/*----- Abaixo a animação qeu mostra quanto do site rodou --------*/ 
+.scroll-wathcer{
+    height: 1px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-primary);
+    width: 100%;
+    scale: 0 1;
+    animation: scroll-wathcer linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-wathcer{
+    to{scale: 1 1;}
+}
+.card:hover{
+    box-shadow: none;
+}
 /*----- Inicio Menu topo --------*/ 
 header{
     background: var(--color-background-dark);
@@ -194,12 +196,13 @@ nav{
     overflow: hidden;
     position: fixed;
     width: 100%;
+    height: 60px;
+    
 }
 nav .logo{
     display: flex; 
     align-items: center;
 }
-
 
 nav .logo img{
     width: 2rem;
@@ -214,8 +217,7 @@ nav .logo a span{
 }
 
 nav .ul{
-    display: flex;
-    justify-content: space-between;
+    display: flex;  
     align-items: center;
 }
 nav .ul li{
@@ -226,13 +228,14 @@ nav .ul li{
 
 nav .ul li:hover{
     color: var(--color-primary);
-    transition: all 400ms;
+    transition: all 400ms ease;
 }
 
 nav .telefone-topo{
     display: flex;
     align-items: center;
-    padding: 20px;
+    
+    
 }
 nav .telefone-topo span{
     color: var(--color-primary);
@@ -242,10 +245,34 @@ nav .telefone-topo p{
     color: white;
 }
 
+.hamburguer{
+    display: none;
+    cursor: pointer
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    transition: all 300ms ease;
+    background-color: var(--color-white);
+}
+
+
+
+/*-----.menu-btn, .close{
+    display: none;
+    background: transparent;
+    color: var(--color-white);
+    cursor: pointer;
+}--------*/ 
+
+
 /*----- Inicio hero --------*/ 
 .hero-principal{
     background: var(--color-background);
-    padding: 14rem 1rem 8rem 1rem;
+    padding: 12rem 1rem 8rem 1rem;
     align-items: center;
     text-align: center;
     width: 100%;
@@ -253,21 +280,30 @@ nav .telefone-topo p{
 }
 .hero-principal h1{
     margin-bottom: 0.7rem;
+    padding: 0 16rem;
+    margin-bottom: 3rem;
 }
+.h1-hero span{
+    font-size: 1.4rem;
+    font-weight: 800;
+} 
 .hero-principal h2{
+
     margin-bottom: 4rem;
+    padding: 0 16rem;
+    font-size: 1rem;
 }
 
 /*----- Nossos serviços --------*/ 
 
 .nossos-servicos{
     background: var(--color-background-dark);
-    padding: 3rem;
+    
     
 }
 .titulo-servicos{
     text-align: center;
-    margin: 2rem;
+    margin-bottom: 2rem;
 }
 .titulo-servicos h3{
     color: var(--color-white);
@@ -285,18 +321,11 @@ nav .telefone-topo p{
 .cards-servicos{
     display: grid;
     width: 96%;
-    margin: 0 auto;
-    
     grid-template-columns: 33% 33% 33%;
 }
 
 .cards-servicos .card{
     background: rgb(0,0,0,0.3);
-    padding: 2rem 2rem;
-    border-radius: 8px;
-    margin: 1rem 2rem;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.336); 
-    
 }
 
 .cards-servicos .card:hover{
@@ -321,16 +350,16 @@ nav .telefone-topo p{
 }
 
 .nossos-servicos .btn-primary{
-    margin: 2rem;
+    margin-top: 2rem;
 }
 
 /*----- Porque a potatohead --------*/ 
 
-.pq-potatohead .container{
+.pq-potatohead{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
 }
-.pq-potatohead .container img{
+.pq-potatohead img{
     max-width: 100%;
     width: 100%;
     height: 100%;
@@ -339,8 +368,6 @@ nav .telefone-topo p{
 
 
 .pq-potatohead .conteudo-do-pq{
-    padding: 4rem 8rem 0 4rem;
-    margin-bottom: 4rem;
     display: block;
 }
 
@@ -351,27 +378,26 @@ nav .telefone-topo p{
 
 .pq-potatohead .conteudo-do-pq p{
     color: var(--color-background-dark);
-    margin-bottom: 16rem;
+    margin-bottom: 8rem;
 
 }
 
 .pq-potatohead .conteudo-do-pq h4{
     color: var(--color-background-dark);
     font-size: 18px;
-    margin-right: 8rem;
+    
     margin-bottom: 2rem;
 }
 
 /*----- Metodologia --------*/ 
 
 .metodologia .container{
-    padding: 4rem 8rem;
     background: var(--color-background-ligth);
 }
 
 .metodologia .conteudo-metodologia h3{
     font-size: 36px;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; 
 }
 .metodologia .conteudo-metodologia h3 span{
     color: var(--color-primary);
@@ -386,19 +412,13 @@ nav .telefone-topo p{
 .metodologia .cards-metodologia{  
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
+    
 }
 
 .metodologia .cards-metodologia .card{
     background: var(--color-white);
-    padding: 2rem 2rem;
-    border-radius: 8px;
-    margin: 1rem 1rem;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.336); 
-    transition: all 400ms;
 }
-.metodologia .cards-metodologia .card:hover{
-    box-shadow: none;
-}
+
 .metodologia .cards-metodologia .card h2{
     color: var(--color-background-dark);
     font-size: 18px;
@@ -416,7 +436,6 @@ nav .telefone-topo p{
 }
 
 .contato .container{
-    padding: 8rem 8rem;
     display: grid;
     grid-template-columns: 60% 40%;
     align-items: center;
@@ -505,23 +524,29 @@ footer .container a{
 }
 /*================= Media Queries tablets ========*/
 @media screen and (max-width: 1200px) {
-    
-    .cards-servicos{
-        
+    .container{
+        padding: 4rem;
+    }
+
+    .hero-principal h1{
+        padding: 0 1rem;
+    }
+
+    .hero-principal h2{
+        padding: 0 1rem;
+    }
+    .cards-servicos{  
         display: grid;
         grid-template-columns: 50% 50%;
     }
-    .pq-potatohead .container{
-        display: inline;
-        
-        
+    .pq-potatohead{
+        display: contents;
+        flex-direction: column;   
     }
-    .pq-potatohead .container img{
-        max-height: 300px;
+    .pq-potatohead img{
+        max-height: 200px;
     }
-    .pq-potatohead .conteudo-do-pq{    
-        padding: 4rem 4rem 0 4rem;
-        margin-bottom: 4rem;  
+    .pq-potatohead .conteudo-do-pq{     
         text-align: center;
     }
 
@@ -552,11 +577,49 @@ footer .container a{
 
 /*================= Media Queries mobile ========*/
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 780px){
     .cards-servicos{
         display: block;
         flex-direction: column;
         width: 100%;  
+    }
+  
+
+    .hamburguer{
+        display: block;
+    }
+
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .ul{
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: var(--color-background-dark);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item{
+       margin: 1rem 0;   
+    }
+
+    .ul.active{
+        left: 0;
+    }
+    nav .telefone-topo{
+        display: flex;
+        padding: 20;
     }
     .metodologia .cards-metodologia{  
         display: block;
