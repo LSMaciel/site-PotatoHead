@@ -269,9 +269,10 @@ nav .telefone-topo{
     
     
 }
-nav .telefone-topo span{
+nav .telefone-topo .incone-telefone{
     color: var(--color-primary);
     margin-right: 8px;
+    width: 30px;
 }
 nav .telefone-topo p{
     color: white;
@@ -369,8 +370,8 @@ nav .telefone-topo p{
     margin: 1rem 0;
     align-items: center;
 }
-.cards-servicos .card .titulo-card span{
-    color: var(--color-primary);
+.cards-servicos .card .titulo-card img{
+    width: 30px;
     margin-right: 1rem;
 }
 .cards-servicos .card .titulo-card h2{
