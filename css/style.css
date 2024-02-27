@@ -51,6 +51,7 @@ body{
 
 .container{
     padding: 8rem 8rem;
+    max-height: 800px;
 }
 
 a{
