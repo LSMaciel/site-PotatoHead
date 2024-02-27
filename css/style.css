@@ -65,13 +65,13 @@ img{
 
 h1{
     font-weight: 800;
-    font-size: 40px;
+    font-size: 2.3rem;
     color: var(--color-white);
 }
 
 h2{
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 400;
     color: var(--color-white);
 }
 
@@ -312,19 +312,18 @@ nav .telefone-topo p{
 }
 .hero-principal h1{
     margin-bottom: 0.7rem;
-    
+    padding: 0 16rem;
     margin-bottom: 3rem;
 }
 .h1-hero span{
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 800;
 } 
 .hero-principal h2{
 
     margin-bottom: 4rem;
     padding: 0 16rem;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 1rem;
 }
 
 /*----- Nossos serviços --------*/ 
@@ -678,7 +677,7 @@ footer .container a{
     }
 
     footer .container{ 
-        padding: 3rem 1rem;
+        padding: 1rem 2rem;
         flex-direction: column;
     }
     footer .container ul{
