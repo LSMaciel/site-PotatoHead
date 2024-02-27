@@ -4,7 +4,7 @@
 :root {
     --color-primary:#F8C300; 
     --color-white: #fff;
-    --color-info-dark: #3d4147;
+    --color-info-dark: #3c4647;
     --color-info-light: #dce1eb;
     --color-light: rgba(0, 0, 0, 0.336)
     --color-dark-variant: #677483;
@@ -116,7 +116,6 @@ p{
     border-radius: 44px;
     transition: all 400ms ease;
     cursor: pointer;
-    max-width: 480px;
 }
 .btn-dark:hover{
     box-shadow: none;
@@ -137,7 +136,6 @@ p{
     border-radius: 44px;
     transition: all 400ms ease;
     cursor: pointer;
-    max-width: 480px;
 }
 .btn-primary:hover{
     box-shadow: none;
@@ -176,7 +174,6 @@ label{
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.336); 
 	transition: all 400ms ease;
     margin: 1rem 1rem;
-    max-width: 400px;
     /*-animation: fade-in linear;
     animation-timeline: view(500px 100px);-*/ 
 }
@@ -206,7 +203,7 @@ label{
 }
 
 .whats{
-    
+    width: 70px;
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -312,7 +309,6 @@ nav .telefone-topo p{
     height: 100%;
 }
 .hero-principal h1{
-    max-width: 1920px;
     margin-bottom: 0.7rem;
     padding: 0 16rem;
     margin-bottom: 3rem;
@@ -322,7 +318,7 @@ nav .telefone-topo p{
     font-weight: 800;
 } 
 .hero-principal h2{
-    max-width: 1920px;
+
     margin-bottom: 4rem;
     padding: 0 16rem;
     font-size: 1rem;
