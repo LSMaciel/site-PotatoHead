@@ -202,6 +202,15 @@ label{
 .card:hover{
     box-shadow: none;
 }
+
+.whats{
+    width: 70px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+    
+}
 /*----- Inicio Menu topo --------*/ 
 header{
     background: var(--color-background-dark);
