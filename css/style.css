@@ -51,7 +51,7 @@ body{
 
 .container{
     padding: 8rem 8rem;
-    max-height: 800px;
+    max-height: 1300px;
 }
 
 a{
@@ -65,13 +65,13 @@ img{
 
 h1{
     font-weight: 800;
-    font-size: 2.3rem;
+    font-size: 40px;
     color: var(--color-white);
 }
 
 h2{
-    font-size: 1.4rem;
-    font-weight: 400;
+    font-size: 28px;
+    font-weight: 700;
     color: var(--color-white);
 }
 
@@ -312,18 +312,19 @@ nav .telefone-topo p{
 }
 .hero-principal h1{
     margin-bottom: 0.7rem;
-    padding: 0 16rem;
+    
     margin-bottom: 3rem;
 }
 .h1-hero span{
-    font-size: 1.6rem;
-    font-weight: 800;
+    font-size: 28px;
+    font-weight: 700;
 } 
 .hero-principal h2{
 
     margin-bottom: 4rem;
     padding: 0 16rem;
-    font-size: 1rem;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 /*----- Nossos serviços --------*/ 
@@ -557,7 +558,7 @@ footer .container a{
 /*================= Media Queries tablets ========*/
 @media screen and (max-width: 1200px) {
     .container{
-        padding: 4rem;
+        padding: 6rem 2rem;
     }
 
     .hero-principal h1{
@@ -577,6 +578,8 @@ footer .container a{
     }
     .pq-potatohead img{
         max-height: 200px;
+        max-width: 100%;
+
     }
     .pq-potatohead .conteudo-do-pq{     
         text-align: center;
@@ -675,6 +678,7 @@ footer .container a{
     }
 
     footer .container{ 
+        padding: 3rem 1rem;
         flex-direction: column;
     }
     footer .container ul{
