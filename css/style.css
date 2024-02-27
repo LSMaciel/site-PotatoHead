@@ -4,7 +4,7 @@
 :root {
     --color-primary:#F8C300; 
     --color-white: #fff;
-    --color-info-dark: #aebdbe;
+    --color-info-dark: #3d4147;
     --color-info-light: #dce1eb;
     --color-light: rgba(0, 0, 0, 0.336)
     --color-dark-variant: #677483;
@@ -203,7 +203,7 @@ label{
 }
 
 .whats{
-    width: 70px;
+    
     position: fixed;
     bottom: 10px;
     right: 10px;
