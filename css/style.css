@@ -12,6 +12,8 @@
     --color-background: linear-gradient(#F8C300, #C39D0D);
     --color-background-dark: #1F1A17;
     --color-background-ligth: #f1f1f1;
+    --color-input-focus:#9c9209;
+    --color-btn-inavito:#6f7172;
 
     --card-border-radius: 2rem;
     --card-padding: 1.8rem;
@@ -119,6 +121,11 @@ p{
 .btn-dark:hover{
     box-shadow: none;
 }
+.btn-dark:disabled{
+    cursor: not-allowed;
+    background-color: var(--color-btn-inavito);
+    color: var(--color-white);
+}
 
 .btn-primary{
     color: var(--color-background-dark);
@@ -134,12 +141,27 @@ p{
 .btn-primary:hover{
     box-shadow: none;
 }
+form{
+    place-items: center;
+}
 input{
    background: var(--color-white); 
    padding: 1rem;
    border-radius: 8px;
-   margin-bottom: 1rem;
+   margin-bottom: 16px;
    width: 100%;
+   display: block;
+   align-items: center; 
+   border: 2px solid transparent;
+   transition: border-color 0.3s, box-shadow 0.3s;
+   
+   
+}
+input:focus, input:hover{
+    outline: none;
+    border: 2px solid;
+    border-color: var(--color-input-focus);
+    box-shadow: 0 0px 12px var(--color-input-focus);
 }
 label{
     font-size: 16px;
