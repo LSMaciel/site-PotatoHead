@@ -184,30 +184,7 @@ label{
     from{ scale: .8; opacity: 0;}
     to{scale: 1; opacity: 1;}
 }-----*/
-
-/*----- css para smothscorll da lenis. --------*/ 
-html.lenis, html.lenis body {
-    height: auto;
-  }
-  
-  .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
-  }
-  
-  .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-  }
-  
-  .lenis.lenis-stopped {
-    overflow: hidden;
-  }
-  
-  .lenis.lenis-scrolling iframe {
-    pointer-events: none;
-  }
-
- -- Abaixo a animação qeu mostra quanto do site rodou --------*/ 
-
+/*----- Abaixo a animação qeu mostra quanto do site rodou --------*/ 
 .scroll-wathcer{
     height: 1px;
     position: fixed;
@@ -275,27 +252,20 @@ header{
 }
 
 nav{
-    background: transparent;
+    background: var(--color-background-dark);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     color: var(--color-white);
-    
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.336);
     overflow: hidden;
     position: fixed;
     width: 100%;
     height: 60px;
-    z-index: 99999;  
-    transition: all .4s;
+    z-index: 99999;
+    
 }
-
-nav.ativo{
-    background: var(--color-background-dark);
-    color: var(--color-white);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.336); 
-}
-
 nav .logo{
     display: flex; 
     align-items: center;
@@ -310,10 +280,6 @@ nav .logo a{
 }
 
 nav .logo a span{
-    color: var(--color-background-dark);
-    transition: all .4s;
-}
-nav.ativo .logo a span{
     color: var(--color-primary);
 }
 
@@ -329,10 +295,6 @@ nav .ul li{
 }
 
 nav .ul li:hover{
-    color: var(--color-background-dark);
-    transition: all 400ms ease;
-}
-nav.ativo .ul li:hover{
     color: var(--color-primary);
     transition: all 400ms ease;
 }
@@ -377,9 +339,6 @@ nav .telefone-topo p{
 
 
 /*----- Inicio hero --------*/ 
-.hero{
-    position: relative;
-}
 .hero-principal{
     background: var(--color-background);
     padding: 12rem 1rem 8rem 1rem;
@@ -387,7 +346,6 @@ nav .telefone-topo p{
     text-align: center;
     width: 100%;
     height: 100%;
-    flex-direction: column;
 }
 .hero-principal h1{
     margin-bottom: 0.7rem;
@@ -404,95 +362,7 @@ nav .telefone-topo p{
     padding: 0 16rem;
     font-size: 1rem;
 }
-.conteudo-hero{
-    z-index: 99;
-}
 
-.icone-scroll{
-    margin-top: 3rem;
-    align-items: center;
-    text-align: center;
-}
-
-#scroll{
-    text-align: center;
-}
-
-#mouse-completo{
-    animation: 1s infinite alternate mouse;
-}
-#seta{
-    animation: 1s infinite alternate-reverse mouseSeta;
-    transform-origin: 7px 3px;
-}
-#btn-mouse{
-    animation: 3s infinite alternate breath;
-    transform-origin: 7px 3px ;
-}
-
-
-@keyframes mouse{
-   from{
-        transform: translateY(0);
-    }
-    to{
-        transform: translateY(3px);
-        
-    }  
-}
-
-@keyframes mouseSeta{
-    from{
-         transform: translateY(0);
-     }
-     to{
-         transform: translateY(3px);
-         
-     }  
- } 
-
-@keyframes breath{
-    0%, 50%, 100%{
-        transform: scaleY(1);
-    }
-    70%{
-        transform: scaleY(0)
-    }
-}
-svg{
-    overflow: visible;
-}
-
-.potatohead{
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    position: relative;
-    margin-top: 3rem;
-    margin-bottom: -12rem;
-}
-
-#potatohead-personagem{
-    position: absolute;
-    margin-top: 3rem;
-}
-#braco-direito{
-    position: absolute;
-}
-
-#bigode{
-    transform-origin: center;
-    animation: 1s infinite alternate bigodeira;
-}
-
-@keyframes bigodeira {
-    from{
-        scale: .98;
-    }
-    to{
-        scale: 1;
-    }
-}
 /*----- Nossos serviços --------*/ 
 
 .nossos-servicos{
@@ -762,11 +632,6 @@ footer .container li{
 footer .container a{
     color: white;
 }
-#icone_facebook, 
-#icone_twitter, 
-#icone_linkedin{
-    display: none;
-}
 /*================= Media Queries tablets ========*/
 @media screen and (max-width: 1200px) {
     .container{
@@ -868,7 +733,6 @@ footer .container a{
         display: flex;
         padding: 20;
     }
-    
     .metodologia .cards-metodologia{  
         display: block;
         width: 100%;
